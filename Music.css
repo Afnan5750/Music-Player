@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.music-player {
+    background: #ffe0e5;
+    width: 400px;
+    padding: 25px 35px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+/* nav .heading h1{
+    font-size:25px;
+    font-weight: 500;
+    margin-top: -0.5px;
+    font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #333;
+} */
+
+nav .circle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: white;
+    color: #f53192;
+    box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
+}
+
+.song-img {
+    width: 220px;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 10px 60px rgba(255, 26, 26, 0.22);
+}
+
+.music-player h1 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+    margin-top: 20px;
+}
+
+.music-player p {
+    font-size: 14px;
+    color: #333;
+}
+
+#progress {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #f53192;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 40px 0;
+}
+
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #f53192;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls div {
+    width: 40px;
+    height: 40px;
+    margin: 13px;
+    background: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #f53192;
+    box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
+}
+
+.controls div:nth-child(3) {
+    transform: scale(1.5);
+    background: #f53192;
+    color: white;
+}
+
+
+
+.menu {
+    display: none;
+    position: absolute;
+    top: -100%; 
+    right: 35.4%; 
+    background: #ffe0e5;
+    width: 399px;
+    height: 40vh;
+    padding: 25px 35px;
+    text-align: center;
+    padding: 10px;
+    animation: slide-in 0.3s forwards; 
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    line-height: 2;
+}
+
+.menu ul li {
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.menu.show-menu {
+    display: block;
+}
+
+@keyframes slide-in {
+    from {
+        top: -100%; 
+    }
+
+    to {
+        top: 20%; 
+    }
+}
+
+
+.highlight {
+    background-color: #f53192;
+    color: white;
+}
